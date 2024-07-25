@@ -1,0 +1,16 @@
+.doctor-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.doctor-card p {
+  margin-bottom: 0.5rem;
+}
