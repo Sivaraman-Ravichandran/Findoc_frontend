@@ -59,7 +59,6 @@ const UserAuth = ({ setIsAuthenticated }) => {
       }
     }
   };
-
   return (
     <div className="container">
       <div className="image-section"></div>

@@ -4,11 +4,9 @@ import "./DefaultAuth.css";
 
 const DefaultAuth = () => {
   const navigate = useNavigate();
-
   const handleAdminLogin = () => {
     navigate("/Admin-login");
   };
-
   const handleUserLogin = () => {
     navigate("/User-login");
   };

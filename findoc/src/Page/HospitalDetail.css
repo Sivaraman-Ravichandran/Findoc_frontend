@@ -1,0 +1,56 @@
+.hospital-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.hospital-image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hospital-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.hospital-info-section {
+  width: 100%;
+  max-width: 800px;
+}
+
+.hospital-info-section h1,
+.hospital-info-section h2 {
+  text-align: center;
+}
+
+.hospital-info-section p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.doctor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hospital-info-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.hospital-info-section ul li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}

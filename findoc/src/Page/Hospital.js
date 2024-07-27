@@ -1,24 +1,28 @@
 import React, { useState } from "react";
-import "../Component/HospitalCard.css";
 import HospitalCard from "../Component/HospitalCard";
 import "./Hospital.css";
+
 const hospitalsData = [
   {
+    id: 1,
     name: "PSG Hospital",
     address: "123 Main St, Cityville",
     services: ["Emergency", "Cardiology", "Neurology"],
   },
   {
+    id: 2,
     name: "KG Hospital",
     address: "456 Elm St, Townsville",
     services: ["Pediatrics", "Orthopedics", "Dermatology"],
   },
   {
+    id: 3,
     name: "KMCH Hospital",
     address: "123 Main St, Cityville",
     services: ["Emergency", "Cardiology", "Neurology"],
   },
   {
+    id: 4,
     name: "Stanley Hospital",
     address: "456 Elm St, Townsville",
     services: ["Pediatrics", "Orthopedics", "Dermatology"],
@@ -53,8 +57,8 @@ const Hospital = () => {
         <button className="search-button">Search</button>
       </div>
       <div className="hospital-cards-container">
-        {filteredHospitals.map((hospital, index) => (
-          <HospitalCard key={index} {...hospital} />
+        {filteredHospitals.map((hospital) => (
+          <HospitalCard key={hospital.id} {...hospital} />
         ))}
       </div>
     </div>
