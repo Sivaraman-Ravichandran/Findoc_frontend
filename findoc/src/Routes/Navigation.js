@@ -12,6 +12,8 @@ import Events from "../Page/Events";
 import Locations from "../Page/Location";
 import Profile from "../Page/Profile";
 import HospitalDetail from "../Page/HospitalDetail";
+import DoctorDetail from "../Page/DoctorDetail";
+
 function Navigation() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -42,9 +44,11 @@ function Navigation() {
         <Route path="/locations" element={<Locations />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/hospital" element={<Hospital />} />
-        <Route path="/hospital/:id" element={<HospitalDetail />} />{" "}
+        <Route path="/hospital/:id" element={<HospitalDetail />} />
+        <Route path="/doctor/:id" element={<DoctorDetail />} />
       </Routes>
     </BrowserRouter>
   );
 }
+
 export default Navigation;

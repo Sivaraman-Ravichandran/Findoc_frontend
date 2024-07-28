@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import DoctorCard from "../Component/DoctorCard";
 import "./HospitalDetail.css";
@@ -8,51 +8,191 @@ const hospitalsData = [
     name: "PSG Hospital",
     address: "123 Main St, Cityville",
     services: ["Emergency", "Cardiology", "Neurology"],
+    image: "/path/to/hospital1.jpg",
     doctors: [
-      { name: "Dr. Smith", specialty: "Cardiology", location: "Room 101" },
-      { name: "Dr. Jones", specialty: "Neurology", location: "Room 102" },
+      {
+        name: "Dr. Sharmila",
+        specialty: "Cardiologist",
+        location: "Coimbatore",
+        status: "Online",
+        image: "/path/to/doctor1.jpg",
+      },
+      {
+        name: "Dr. Pavithran",
+        specialty: "Neurologist",
+        location: "Madurai",
+        status: "Away",
+        image: "/path/to/doctor2.jpg",
+      },
     ],
-    image: "/path/to/image1.jpg",
-    about: "About PSG Hospital...",
-    news: "Latest news about PSG Hospital...",
-    events: "Upcoming events at PSG Hospital...",
-    contact: "Contact information for PSG Hospital...",
+    news: "Latest hospital news here.",
+    events: "Upcoming hospital events here.",
+    contact: "Contact information here.",
   },
   {
     id: 2,
     name: "KG Hospital",
     address: "456 Elm St, Townsville",
     services: ["Pediatrics", "Orthopedics", "Dermatology"],
+    image: "../assets/kg.jpg",
     doctors: [
-      { name: "Dr. Brown", specialty: "Pediatrics", location: "Room 201" },
-      { name: "Dr. White", specialty: "Orthopedics", location: "Room 202" },
+      {
+        name: "Dr. Sharmila",
+        specialty: "Cardiologist",
+        location: "Coimbatore",
+        status: "Online",
+        image: "/path/to/doctor1.jpg",
+      },
+      {
+        name: "Dr. Pavithran",
+        specialty: "Neurologist",
+        location: "Madurai",
+        status: "Away",
+        image: "/path/to/doctor2.jpg",
+      },
     ],
-    image: "/path/to/image2.jpg",
-    about: "About KG Hospital...",
-    news: "Latest news about KG Hospital...",
-    events: "Upcoming events at KG Hospital...",
-    contact: "Contact information for KG Hospital...",
+    news: "Latest hospital news here.",
+    events: "Upcoming hospital events here.",
+    contact: "Contact information here.",
   },
-  // Add more hospital data as needed
+  {
+    id: 3,
+    name: "PSG Hospital",
+    address: "123 Main St, Cityville",
+    services: ["Emergency", "Cardiology", "Neurology"],
+    image: "/path/to/hospital1.jpg",
+    doctors: [
+      {
+        name: "Dr. Sharmila",
+        specialty: "Cardiologist",
+        location: "Coimbatore",
+        status: "Online",
+        image: "/path/to/doctor1.jpg",
+      },
+      {
+        name: "Dr. Pavithran",
+        specialty: "Neurologist",
+        location: "Madurai",
+        status: "Away",
+        image: "/path/to/doctor2.jpg",
+      },
+    ],
+    news: "Latest hospital news here.",
+    events: "Upcoming hospital events here.",
+    contact: "Contact information here.",
+  },
+  {
+    id: 4,
+    name: "KG Hospital",
+    address: "456 Elm St, Townsville",
+    services: ["Pediatrics", "Orthopedics", "Dermatology"],
+    image: "../assets/kg.jpg",
+    doctors: [
+      {
+        name: "Dr. Sharmila",
+        specialty: "Cardiologist",
+        location: "Coimbatore",
+        status: "Online",
+        image: "/path/to/doctor1.jpg",
+      },
+      {
+        name: "Dr. Pavithran",
+        specialty: "Neurologist",
+        location: "Madurai",
+        status: "Away",
+        image: "/path/to/doctor2.jpg",
+      },
+    ],
+    news: "Latest hospital news here.",
+    events: "Upcoming hospital events here.",
+    contact: "Contact information here.",
+  },
+  {
+    id: 5,
+    name: "PSG Hospital",
+    address: "123 Main St, Cityville",
+    services: ["Emergency", "Cardiology", "Neurology"],
+    image: "/path/to/hospital1.jpg",
+    doctors: [
+      {
+        name: "Dr. Sharmila",
+        specialty: "Cardiologist",
+        location: "Coimbatore",
+        status: "Online",
+        image: "/path/to/doctor1.jpg",
+      },
+      {
+        name: "Dr. Pavithran",
+        specialty: "Neurologist",
+        location: "Madurai",
+        status: "Away",
+        image: "/path/to/doctor2.jpg",
+      },
+    ],
+    news: "Latest hospital news here.",
+    events: "Upcoming hospital events here.",
+    contact: "Contact information here.",
+  },
+  {
+    id: 6,
+    name: "KG Hospital",
+    address: "456 Elm St, Townsville",
+    services: ["Pediatrics", "Orthopedics", "Dermatology"],
+    image: "../assets/kg.jpg",
+    doctors: [
+      {
+        name: "Dr. Sharmila",
+        specialty: "Cardiologist",
+        location: "Coimbatore",
+        status: "Online",
+        image: "/path/to/doctor1.jpg",
+      },
+      {
+        name: "Dr. Pavithran",
+        specialty: "Neurologist",
+        location: "Madurai",
+        status: "Away",
+        image: "/path/to/doctor2.jpg",
+      },
+    ],
+    news: "Latest hospital news here.",
+    events: "Upcoming hospital events here.",
+    contact: "Contact information here.",
+  },
+  // Add more hospitals as needed
 ];
 
-const HospitalDetails = () => {
+const HospitalDetail = () => {
   const { id } = useParams();
-  const hospital = hospitalsData.find((h) => h.id === parseInt(id));
+  const hospital = hospitalsData.find(
+    (hospital) => hospital.id === parseInt(id)
+  );
+  const [searchTerm, setSearchTerm] = useState("");
 
   if (!hospital) {
     return <div>Hospital not found</div>;
   }
 
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredDoctors = hospital.doctors.filter(
+    (doctor) =>
+      doctor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      doctor.specialty.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      doctor.location.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className="hospital-details">
+    <div className="hospital-detail-container">
+      <h1>{hospital.name}</h1>
       <img
         src={hospital.image}
-        alt={`${hospital.name}`}
+        alt={hospital.name}
         className="hospital-image"
       />
-      <h1>{hospital.name}</h1>
-      <p>{hospital.about}</p>
+      <p>{hospital.address}</p>
       <h2>Services</h2>
       <ul>
         {hospital.services.map((service, index) => (
@@ -60,8 +200,18 @@ const HospitalDetails = () => {
         ))}
       </ul>
       <h2>Doctors</h2>
-      <div className="doctor-cards">
-        {hospital.doctors.map((doctor, index) => (
+      <div className="search-container">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          placeholder="Search doctors..."
+          className="search-input"
+        />
+        <button className="search-button">Search</button>
+      </div>
+      <div className="doctor-cards-container">
+        {filteredDoctors.map((doctor, index) => (
           <DoctorCard key={index} {...doctor} />
         ))}
       </div>
@@ -69,10 +219,10 @@ const HospitalDetails = () => {
       <p>{hospital.news}</p>
       <h2>Events</h2>
       <p>{hospital.events}</p>
-      <h2>Contact</h2>
+      <h2>Contact Information</h2>
       <p>{hospital.contact}</p>
     </div>
   );
 };
 
-export default HospitalDetails;
+export default HospitalDetail;

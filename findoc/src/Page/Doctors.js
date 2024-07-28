@@ -5,6 +5,14 @@ import "./Doctors.css";
 const doctorsData = [
   { name: "Dr. Sharmila", specialty: "Cardilogists", location: "Coimbatore" },
   { name: "Dr. Pavithran", specialty: "Neurologists", location: "Madurai" },
+  { name: "Dr. Sharmila", specialty: "Cardilogists", location: "Coimbatore" },
+  { name: "Dr. Pavithran", specialty: "Neurologists", location: "Madurai" },
+  { name: "Dr. Sharmila", specialty: "Cardilogists", location: "Coimbatore" },
+  { name: "Dr. Pavithran", specialty: "Neurologists", location: "Madurai" },
+  { name: "Dr. Sharmila", specialty: "Cardilogists", location: "Coimbatore" },
+  { name: "Dr. Pavithran", specialty: "Neurologists", location: "Madurai" },
+  { name: "Dr. Sharmila", specialty: "Cardilogists", location: "Coimbatore" },
+  { name: "Dr. Pavithran", specialty: "Neurologists", location: "Madurai" },
   // Add more doctors as needed
 ];
 

@@ -1,21 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import "./DoctorCard.css";
 
-const DoctorCard = ({ name, specialty, location }) => {
+const DoctorCard = ({ id, name, specialty, location, status, image }) => {
   return (
-    <div className="doctor-card">
-      <h2>{name}</h2>
-      <p>Specialty: {specialty}</p>
-      <p>Location: {location}</p>
-    </div>
+    <Link to={`/doctor/${id}`} className="doctor-card-link">
+      <div className="doctor-card">
+        <img src={image} alt={name} className="doctor-card-image" />
+        <h2>{name}</h2>
+        <p>Specialty: {specialty}</p>
+        <p>Location: {location}</p>
+        <p>Status: {status}</p>
+      </div>
+    </Link>
   );
-};
-
-DoctorCard.propTypes = {
-  name: PropTypes.string.isRequired,
-  specialty: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
 };
 
 export default DoctorCard;
