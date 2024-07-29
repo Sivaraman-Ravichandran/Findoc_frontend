@@ -19,12 +19,31 @@ const specialties = [
     name: "Nephrologists",
     image: "https://graph.org/file/e093423f28976123f4fce.jpg",
   },
-  { name: "Dermatology", image: "https://graph.org/file/b3558313580995813ef22.jpg" },
-  { name: "Pediatrics", image: "https://graph.org/file/1f71f6e418640118f37c9.jpg" },
-  { name: "Oncology", image: "https://graph.org/file/398c164929296e09d5e4d.jpg" },
-  { name: "Psychiatry", image: "https://graph.org/file/0c98071018b3cc5def5e3.jpg" },
-  { name: "Gastroenterology", image: "https://graph.org/file/a2af6908194ade97e8aa1.jpg" },
-  { name: "Endocrinology", image: "https://graph.org/file/4ee3e0bd68cecfa91c525.jpg" },
+  {
+    name: "Dermatology",
+    image: "https://graph.org/file/31c4fab9194c4ec8369aa.jpg",
+  },
+
+  {
+    name: "Pediatrics",
+    image: "https://graph.org/file/1f71f6e418640118f37c9.jpg",
+  },
+  {
+    name: "Oncology",
+    image: "https://graph.org/file/398c164929296e09d5e4d.jpg",
+  },
+  {
+    name: "Psychiatry",
+    image: "https://graph.org/file/0c98071018b3cc5def5e3.jpg",
+  },
+  {
+    name: "Gastroenterology",
+    image: "https://graph.org/file/a2af6908194ade97e8aa1.jpg",
+  },
+  {
+    name: "Endocrinology",
+    image: "https://graph.org/file/4ee3e0bd68cecfa91c525.jpg",
+  },
   // Add more specialties as needed
 ];
 

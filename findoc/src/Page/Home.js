@@ -49,13 +49,12 @@ const topRatedDoctors = [
   },
   // Add more doctors as needed
 ];
-
 const Home = () => {
   return (
     <div className="home-container">
       <div className="about">
         <div className="description">
-          <h1>Welcome to HealthConnect</h1>
+          <h1>Welcome to FindDoc</h1>
           <p style={{ fontSize: 25 }}>
             Your Gateway to Premier Healthcare Services
           </p>

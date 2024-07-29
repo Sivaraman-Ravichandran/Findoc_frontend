@@ -5,25 +5,21 @@
   background-color: #131523;
   padding: 1rem;
 }
-
 .navbar-logo img {
   height: 50px;
 }
-
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
-
 .navbar-links li {
   display: inline;
 }
-
 .navbar-links a {
   color: #7a7899;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: color 0.3s;
 }
 
