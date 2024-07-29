@@ -8,7 +8,7 @@ const doctorsData = [
     specialty: "Cardiologist",
     location: "Coimbatore",
     status: "Online",
-    image: "/path/to/doctor1.jpg",
+    image: "https://graph.org/file/40e4a1407d30d3e51295a.jpg",
     about: "Dr. Sharmila has over 20 years of experience in cardiology.",
     duties: ["PSG Hospital", "Private Clinic"],
   },

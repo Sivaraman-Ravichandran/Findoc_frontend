@@ -19,7 +19,7 @@ h1 {
   width: 200px;
   padding: 1rem;
   margin: 1rem 0;
-  background-color: #007bff;
+  background-color: #555fca;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -29,5 +29,5 @@ h1 {
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #131523;
 }

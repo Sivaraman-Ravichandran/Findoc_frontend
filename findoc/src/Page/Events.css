@@ -1,0 +1,51 @@
+.Eimg{
+    margin-top: 0px;
+    margin-left: 50px;
+    border-radius: 15px;
+    background-image: url("https://graph.org/file/f00e4562bf68d8180a0bc.jpg");
+    background-color: rgba(45, 45, 45, 0.491);
+    background-blend-mode: multiply;
+    width:1300px;
+    height: 400px;
+}
+.Eimg1{
+    margin-top: 0px;
+    margin-left: 50px;
+    border-radius: 15px;
+    background-image: url("https://graph.org/file/b6937cab10a88da5ca457.jpg");
+    background-color: rgba(45, 45, 45, 0.491);
+    background-blend-mode: multiply;
+    width:1300px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.Eimg2{
+    margin-top: 0px;
+    margin-left: 50px;
+    border-radius: 15px;
+    background-image: url("https://graph.org/file/d07b117b71a4d3b2cc1cd.jpg");
+    background-color: rgba(45, 45, 45, 0.491);
+    background-blend-mode: multiply;
+    width:1300px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+
+}
+.Ebtn{
+    width: 150px;
+    height: 45px;
+    background-color: rgb(148, 51, 238);
+    color: aliceblue;
+    border-color:rgb(148, 60, 231);
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+body{
+    height: 1650px;
+}

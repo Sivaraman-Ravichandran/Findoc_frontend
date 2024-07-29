@@ -18,7 +18,7 @@ const DefaultAuth = () => {
         Admin Login
       </button>
       <button onClick={handleUserLogin} className="button">
-        User Login / Register
+        User Login
       </button>
     </div>
   );

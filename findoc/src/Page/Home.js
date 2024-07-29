@@ -1,8 +1,9 @@
+// Home.js
 import React from "react";
 import HospitalCard from "../Component/HospitalCard";
 import DoctorCard from "../Component/DoctorCard";
 import "./Home.css";
-
+import "../Component/DoctorCard.css";
 const topRatedHospitals = [
   {
     id: 1,
@@ -24,7 +25,7 @@ const topRatedHospitals = [
   },
   {
     id: 4,
-    name: " Hospital",
+    name: "Hospital",
     address: "456 Elm St, Townsville",
     image: "https://graph.org/file/7a5580a9567eb5e5d8322.jpg",
   },
@@ -37,14 +38,14 @@ const topRatedDoctors = [
     name: "Dr. Sharmila",
     specialty: "Cardiology",
     location: "Coimbatore",
-    photo: "https://graph.org/file/sharmila.jpg",
+    image: "https://graph.org/file/40e4a1407d30d3e51295a.jpg",
   },
   {
     id: 2,
     name: "Dr. Pavithran",
     specialty: "Neurology",
     location: "Madurai",
-    photo: "https://graph.org/file/pavithran.jpg",
+    image: "https://graph.org/file/0bcd57c3960e76ad33a55.jpg",
   },
   // Add more doctors as needed
 ];
@@ -55,13 +56,22 @@ const Home = () => {
       <div className="about">
         <div className="description">
           <h1>Welcome to HealthConnect</h1>
-          <p style={{ fontSize: 25 }}>Your Gateway to Premier Healthcare Services</p>
+          <p style={{ fontSize: 25 }}>
+            Your Gateway to Premier Healthcare Services
+          </p>
           <p style={{ color: "#3A3D48" }}>
-            At HealthConnect, we are dedicated to providing you with the highest quality of healthcare services, right at your fingertips. Our platform connects you with an extensive network of top-rated hospitals and specialists, ensuring that you receive the best care possible.
+            At HealthConnect, we are dedicated to providing you with the highest
+            quality of healthcare services, right at your fingertips. Our
+            platform connects you with an extensive network of top-rated
+            hospitals and specialists, ensuring that you receive the best care
+            possible.
           </p>
         </div>
         <div className="hosp">
-          <img src="https://graph.org/file/c53cb733bc6453b9e79f7.jpg" alt="HealthConnect" />
+          <img
+            src="https://graph.org/file/c53cb733bc6453b9e79f7.jpg"
+            alt="HealthConnect"
+          />
         </div>
       </div>
 
@@ -72,7 +82,7 @@ const Home = () => {
             <HospitalCard key={hospital.id} {...hospital} />
           ))}
         </div>
-        
+
         <h2>Top Rated Doctors</h2>
         <div className="doctor-cards-container">
           {topRatedDoctors.map((doctor) => (
