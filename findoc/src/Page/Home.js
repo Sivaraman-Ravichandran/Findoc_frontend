@@ -55,12 +55,12 @@ const Home = () => {
       <div className="about">
         <div className="description">
           <h1>Welcome to FindDoc</h1>
-          <p style={{ fontSize: 25 }}>
+          <p style={{ fontSize: 25}}>
             Your Gateway to Premier Healthcare Services
           </p>
           <p style={{ color: "#3A3D48" }}>
-            At HealthConnect, we are dedicated to providing you with the highest
-            quality of healthcare services, right at your fingertips. Our
+            <span className="health">At HealthConnect, we are dedicated to providing you with the highest
+            quality of </span>healthcare services, right at your fingertips. Our
             platform connects you with an extensive network of top-rated
             hospitals and specialists, ensuring that you receive the best care
             possible.

@@ -1,5 +1,5 @@
 .hospital-detail-container {
-  padding: 20px;
+ 
 }
 
 .hospital-detail-container h1 {
@@ -9,8 +9,7 @@
 
 .hospital-image {
   width: 100%;
-  max-width: 600px;
-  height: auto;
+  height: 50%;
   margin-bottom: 20px;
 }
 
@@ -60,4 +59,29 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+
+.hospital-about {
+  position: relative;
+  width: 100%;
+}
+
+.hospital-about img {
+  width: 100%;
+  opacity: 0.6;
+}
+
+.hospital-name-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3A3D48;
+  font-size: 28px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 5em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

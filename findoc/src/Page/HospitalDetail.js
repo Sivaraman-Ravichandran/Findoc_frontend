@@ -5,10 +5,10 @@ import "./HospitalDetail.css";
 const hospitalsData = [
   {
     id: 1,
-    name: "PSG Hospital",
+    name: "PSG Hospitals",
     address: "123 Main St, Cityville",
     services: ["Emergency", "Cardiology", "Neurology"],
-    image: "/path/to/hospital1.jpg",
+    image: "https://graph.org/file/1cf2a543d67ff270eef04.jpg",
     doctors: [
       {
         name: "Dr. Sharmila",
@@ -34,7 +34,7 @@ const hospitalsData = [
     name: "KG Hospital",
     address: "456 Elm St, Townsville",
     services: ["Pediatrics", "Orthopedics", "Dermatology"],
-    image: "../assets/kg.jpg",
+    image: "https://graph.org/file/7a5580a9567eb5e5d8322.jpg",
     doctors: [
       {
         name: "Dr. Sharmila",
@@ -186,12 +186,14 @@ const HospitalDetail = () => {
 
   return (
     <div className="hospital-detail-container">
-      <h1>{hospital.name}</h1>
-      <img
-        src={hospital.image}
-        alt={hospital.name}
-        className="hospital-image"
-      />
+      <div className="hospital-about">
+        <img
+          src={hospital.image}
+          alt={hospital.name}
+          className="hospital-image"
+        />
+        <div className="hospital-name-overlay">{hospital.name}</div>
+      </div>
       <p>{hospital.address}</p>
       <h2>Services</h2>
       <ul>

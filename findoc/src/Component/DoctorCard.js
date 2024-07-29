@@ -2,7 +2,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./DoctorCard.css";
-
 const DoctorCard = ({ id, name, specialty, location, image }) => {
   return (
     <Link to={`/doctor/${id}`} className="doctor-card-link">
