@@ -85,3 +85,86 @@
   font-size: 5em;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.location{
+  display: flex;
+  gap:10px;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+.location p{
+  font-size:20px;
+  margin-top: 25px;
+}
+.about{
+  display: block;
+}
+.phone-link {
+  background-color: #178800; /* Bootstrap's danger color */
+  color: #ffffff; /* White text color */
+  padding: 10px 15px; /* Some padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline from the link */
+  display: inline-flex; /* To align icon and text properly */
+  align-items: center; /* Vertically center the content */
+  
+  width: 170px;
+  height: 50px;
+}
+
+.phone-link i {
+  margin-right: 8px; /* Space between the icon and text */
+}
+
+.phone-link:hover {
+  background-color: #2dcf5e; /* Slightly darker red on hover */
+  color: #ffffff; /* Ensure text stays white */
+}
+.phone-link p{
+  padding-top:10px ;
+}
+.phone{
+  padding: 10px;
+  padding-left: 80px;
+  padding-right: 100px;
+}
+.about h1{
+  text-align: center;
+}
+
+
+
+
+
+.services {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 20px; /* Padding around the content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 600px; /* Max width of the container */
+  margin: 0 auto; /* Center align the container */
+}
+
+.services h2 {
+  font-size: 24px; /* Larger font size for heading */
+  color: #343a40; /* Dark color for heading text */
+  text-align: center; /* Center align the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.services ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+.services li {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center align items vertically */
+  font-size: 18px; /* Font size for list items */
+  color: #495057; /* Darker color for list item text */
+  margin-bottom: 10px; /* Space below each list item */
+}
+
+.services li svg {
+  margin-right: 10px; /* Space between icon and text */
+  color: #28a745; /* Green color for checkmark icon */
+}
