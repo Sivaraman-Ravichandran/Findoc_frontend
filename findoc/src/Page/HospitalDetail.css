@@ -1,18 +1,13 @@
-.hospital-detail-container {
- 
-}
-
 .hospital-detail-container h1 {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-.hospital-image {
-  width: 100%;
-  height: 50%;
-  margin-bottom: 20px;
+.hospital-image{
+  height: 90vh;
+  opacity: 1;
+  filter: brightness(50%);
 }
-
 .hospital-detail-container p {
   font-size: 16px;
   margin-bottom: 10px;
@@ -29,142 +24,211 @@
   padding-left: 20px;
 }
 
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.search-input {
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-right: 8px;
-}
-
-.search-button {
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.search-button:hover {
-  background-color: #0056b3;
-}
-
 .doctor-cards-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-
-.hospital-about {
-  position: relative;
-  width: 100%;
-}
-
-.hospital-about img {
-  width: 100%;
-  opacity: 0.6;
-}
-
-.hospital-name-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #3A3D48;
-  font-size: 28px;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 5em;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-.location{
-  display: flex;
-  gap:10px;
-  margin-left: 100px;
-  margin-top: 10px;
-}
-.location p{
-  font-size:20px;
-  margin-top: 25px;
-}
-.about{
-  display: block;
-}
 .phone-link {
-  background-color: #178800; /* Bootstrap's danger color */
-  color: #ffffff; /* White text color */
-  padding: 10px 15px; /* Some padding around the text */
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* Remove underline from the link */
-  display: inline-flex; /* To align icon and text properly */
-  align-items: center; /* Vertically center the content */
-  
+  background-color: #178800;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
   width: 170px;
   height: 50px;
 }
 
-.phone-link i {
-  margin-right: 8px; /* Space between the icon and text */
+.phone-link:hover {
+  background-color: #2dcf5e;
+  color: #ffffff;
 }
 
-.phone-link:hover {
-  background-color: #2dcf5e; /* Slightly darker red on hover */
-  color: #ffffff; /* Ensure text stays white */
+.phone-link p {
+  padding-top: 10px;
 }
-.phone-link p{
-  padding-top:10px ;
-}
-.phone{
+
+.phone {
   padding: 10px;
   padding-left: 80px;
   padding-right: 100px;
 }
-.about h1{
+
+.about h1 {
   text-align: center;
 }
 
-
-
-
-
 .services {
-  background-color: #f8f9fa; /* Light background color */
-  padding: 20px; /* Padding around the content */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  max-width: 600px; /* Max width of the container */
-  margin: 0 auto; /* Center align the container */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .services h2 {
-  font-size: 24px; /* Larger font size for heading */
-  color: #343a40; /* Dark color for heading text */
-  text-align: center; /* Center align the heading */
-  margin-bottom: 20px; /* Space below the heading */
+  font-size: 24px;
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .services ul {
-  list-style: none; /* Remove default list styles */
-  padding: 0; /* Remove default padding */
+  list-style: none;
+  padding: 0;
 }
 
 .services li {
-  display: flex; /* Flexbox for alignment */
-  align-items: center; /* Center align items vertically */
-  font-size: 18px; /* Font size for list items */
-  color: #495057; /* Darker color for list item text */
-  margin-bottom: 10px; /* Space below each list item */
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #495057;
+  margin-bottom: 10px;
 }
 
 .services li svg {
-  margin-right: 10px; /* Space between icon and text */
-  color: #28a745; /* Green color for checkmark icon */
+  margin-right: 10px;
+  color: #28a745;
+}
+
+.hospital-about {
+  width: 100%;
+ 
+}
+.hosp-head{
+  position: absolute;
+  display: flex;
+  top: 5%;
+  width: 100%;
+  height: 80%;
+}
+
+
+
+
+
+
+
+/*Contact-Form*/
+.applyBox {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin-left: 100px;
+  margin-top:70px
+}
+.dsu-form {
+  padding: 20px;
+}
+
+.frmBg {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.frmBg h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.frmBg h4 {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.contact_fild {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-fild-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn_submit {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn_submit:hover {
+  background-color: #0056b3;
+}
+
+.loading-message,
+.success-message {
+  display: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.loading-message.show,
+.success-message.show {
+  display: block;
+}
+
+.hosp-detail{
+  width:60%;
+  padding: 150px; 
+}
+.contact-form{
+  width: 40%
+}
+
+.location{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  padding-left: 100px;
+}
+
+
+.hosp-detail h1{
+  font-size: 80px;
+  text-align: center;
+  color: whitesmoke;
+}
+.hosp-detail p{
+  font-size: 40px;
+  color: whitesmoke;
+ 
 }

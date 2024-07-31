@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import DoctorCard from "../Component/DoctorCard";
 import "./HospitalDetail.css";
+import ContactForm from "../Component/ContactForm";
 const hospitalsData = [
   {
     id: 1,
@@ -69,7 +70,7 @@ const hospitalsData = [
     name: "PSG Hospital",
     address: "123 Main St, Cityville",
     services: ["Emergency", "Cardiology", "Neurology"],
-    image: "/path/to/hospital1.jpg",
+    image: "https://graph.org/file/96e0d65c056e003ca98c2.jpg",
     doctors: [
       {
         name: "Dr. Sharmila",
@@ -191,25 +192,27 @@ const HospitalDetail = () => {
   return (
     <div className="hospital-detail-container">
       <div className="hospital-about">
-        <img
-          src={hospital.image}
-          alt={hospital.name}
-          className="hospital-image"
-        />
-        <div className="hospital-name-overlay">
-          <p style={{ fontSize: "1.8em" }}>{hospital.name}</p>
-          <div className="location">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="60"
-              height="60"
-              fill="currentColor"
-              class="bi bi-geo-alt-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-            </svg>
-            <p>{hospital.address}</p>
+        <img src={hospital.image} alt="error" className="hospital-image" />
+        <div className="hosp-head">
+          <div className="hosp-detail">
+            <h1>{hospital.name}</h1>
+            <div className="location">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="white"
+                class="bi bi-geo-alt"
+                viewBox="0 0 16 16"
+              >
+                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+              </svg>
+              <p>{hospital.address}</p>
+            </div>
+          </div>
+          <div className="contact-form">
+            <ContactForm name={hospital.name} />
           </div>
         </div>
       </div>
