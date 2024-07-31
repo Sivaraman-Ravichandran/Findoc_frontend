@@ -13,7 +13,8 @@ import Locations from "../Page/Location";
 import Profile from "../Page/Profile";
 import HospitalDetail from "../Page/HospitalDetail";
 import DoctorDetail from "../Page/DoctorDetail";
-
+import LandingPage from "../Page/Landingpage/LandingPage";
+import DoctorPage from "../Page/DoctorPage";
 function Navigation() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -26,9 +27,9 @@ function Navigation() {
 
   return (
     <BrowserRouter>
-      {isAuthenticated && <NavBar />}
       <Routes>
-        <Route path="/" element={<DefaultAuth />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/default" element={<DefaultAuth />} />
         <Route
           path="/admin-login"
           element={<AdminLogin setIsAuthenticated={setIsAuthenticated} />}
@@ -46,6 +47,7 @@ function Navigation() {
         <Route path="/hospital" element={<Hospital />} />
         <Route path="/hospital/:id" element={<HospitalDetail />} />
         <Route path="/doctor/:id" element={<DoctorDetail />} />
+        <Route path="/special/:id" element={<DoctorPage />} />
       </Routes>
     </BrowserRouter>
   );

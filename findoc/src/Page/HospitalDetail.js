@@ -176,15 +176,10 @@ const HospitalDetail = () => {
   const hospital = hospitalsData.find(
     (hospital) => hospital.id === parseInt(id)
   );
-  const [searchTerm, setSearchTerm] = useState("");
-
+  const [searchTerm] = useState("");
   if (!hospital) {
     return <div>Hospital not found</div>;
   }
-
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
 
   const filteredDoctors = hospital.doctors.filter(
     (doctor) =>

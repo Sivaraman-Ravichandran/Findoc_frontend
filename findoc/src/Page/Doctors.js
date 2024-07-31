@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../Component/DoctorCard.css";
 import DoctorCard from "../Component/DoctorCard";
 import "./Doctors.css";
+import NavBar from "./NavBar";
 const doctorsData = [
   {
     id: "1",
@@ -93,24 +94,26 @@ const Doctors = () => {
   );
 
   return (
-    <div className="doctors-container">
-      <h1>Doctors</h1>
-      <div className="search-container">
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleSearchChange}
-          placeholder="Search doctors..."
-          className="search-input"
-        />
-        <button className="search-button">Search</button>
+    <>
+      <NavBar />
+      <div className="doctors-container">
+        <h1>Doctors</h1>
+        <div className="search-container">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            placeholder="Search doctors..."
+            className="search-input"
+          />
+        </div>
+        <div className="doctor-cards-container">
+          {filteredDoctors.map((doctor, index) => (
+            <DoctorCard key={index} {...doctor} />
+          ))}
+        </div>
       </div>
-      <div className="doctor-cards-container">
-        {filteredDoctors.map((doctor, index) => (
-          <DoctorCard key={index} {...doctor} />
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 

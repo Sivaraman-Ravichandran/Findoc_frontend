@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import HospitalCard from "../Component/HospitalCard";
 import "./Hospital.css";
-
+import NavBar from "./NavBar";
 const hospitalsData = [
   {
     id: 1,
@@ -115,23 +115,26 @@ const Hospital = () => {
   );
 
   return (
-    <div className="hospital-container">
-      <h1>Hospitals</h1>
-      <div className="search-container">
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleSearchChange}
-          placeholder="Search hospitals..."
-          className="search-input"
-        />
+    <>
+      <NavBar />
+      <div className="hospital-container">
+        <h1>Hospitals</h1>
+        <div className="search-container">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            placeholder="Search hospitals..."
+            className="search-input"
+          />
+        </div>
+        <div className="hospital-cards-container">
+          {filteredHospitals.map((hospital) => (
+            <HospitalCard key={hospital.id} {...hospital} />
+          ))}
+        </div>
       </div>
-      <div className="hospital-cards-container">
-        {filteredHospitals.map((hospital) => (
-          <HospitalCard key={hospital.id} {...hospital} />
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 
