@@ -3,7 +3,7 @@
   margin-bottom: 20px;
 }
 
-.hospital-image{
+.hospital-image {
   height: 90vh;
   opacity: 1;
   filter: brightness(50%);
@@ -97,21 +97,14 @@
 
 .hospital-about {
   width: 100%;
- 
 }
-.hosp-head{
+.hosp-head {
   position: absolute;
   display: flex;
-  top: 5%;
+  top: 15%;
   width: 100%;
   height: 80%;
 }
-
-
-
-
-
-
 
 /*Contact-Form*/
 .applyBox {
@@ -121,7 +114,7 @@
   padding: 20px;
   max-width: 400px;
   margin-left: 100px;
-  margin-top:70px
+  margin-top: 70px;
 }
 .dsu-form {
   padding: 20px;
@@ -206,29 +199,27 @@
   display: block;
 }
 
-.hosp-detail{
-  width:60%;
-  padding: 150px; 
+.hosp-detail {
+  width: 60%;
+  padding: 150px;
 }
-.contact-form{
-  width: 40%
+.contact-form {
+  width: 40%;
 }
 
-.location{
+.location {
   display: flex;
   gap: 10px;
   padding: 10px;
   padding-left: 100px;
 }
 
-
-.hosp-detail h1{
+.hosp-detail h1 {
   font-size: 80px;
   text-align: center;
   color: whitesmoke;
 }
-.hosp-detail p{
+.hosp-detail p {
   font-size: 40px;
   color: whitesmoke;
- 
 }
