@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultAuth from "../Page/Authentication/DefaultAuth";
 import AdminLogin from "../Page/Authentication/AdminLogin";
 import UserAuth from "../Page/Authentication/UserAuth";
-import NavBar from "../Page/NavBar";
 import Home from "../Page/Home";
 import Hospital from "../Page/Hospital";
 import Doctors from "../Page/Doctors";
@@ -24,9 +23,9 @@ function Navigation() {
       setIsAuthenticated(true);
     }
   }, []);
-
   return (
     <BrowserRouter>
+    {isAuthenticated}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/default" element={<DefaultAuth />} />
