@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import DoctorCard from "../Component/DoctorCard";
+import DoctorProfile from "../Component/DoctorProfile";
 import "./HospitalDetail.css";
 import ContactForm from "../Component/ContactForm";
 import NavBar from "./NavBar";
@@ -265,7 +265,7 @@ const HospitalDetail = () => {
 
           <div className="doctor-cards-container">
             {filteredDoctors.map((doctor, index) => (
-              <DoctorCard key={index} {...doctor} />
+              <DoctorProfile key={index} {...doctor} />
             ))}
           </div>
         </div>

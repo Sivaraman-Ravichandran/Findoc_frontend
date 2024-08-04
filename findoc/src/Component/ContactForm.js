@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-const ContactForm = ({name}) => {
+import axios from "axios";
+import "./ContactForm.css"; // Assuming your CSS is in a file named ContactForm.css
+
+const ContactForm = ({ name }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -8,6 +11,7 @@ const ContactForm = ({name}) => {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,16 +21,24 @@ const ContactForm = ({name}) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setSuccess(false);
-    // Here you can add your form submission logic
-    // For demo, we use a timeout to simulate form submission
-    setTimeout(() => {
+    setError(false);
+
+    try {
+      const response = await axios.post("http://localhost:8080/send", formData);
+      if (response.data === "Email Sent Successfully") {
+        setSuccess(true);
+      } else {
+        setError(true);
+      }
+    } catch (error) {
+      setError(true);
+    } finally {
       setLoading(false);
-      setSuccess(true);
-    }, 2000);
+    }
   };
 
   return (
@@ -59,7 +71,7 @@ const ContactForm = ({name}) => {
                     name="email"
                     placeholder="Enter Email*"
                     required
-                    type="text"
+                    type="email"
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -88,9 +100,9 @@ const ContactForm = ({name}) => {
                       fontSize: "11px",
                     }}
                   >
-                    By proceeding ahead you expressly agree to {name} to
-                    contact you via Whatsapp and other channels with suitable
-                    college options.
+                    By proceeding ahead you expressly agree to {name} to contact
+                    you via Whatsapp and other channels with suitable college
+                    options.
                   </p>
                 </div>
               </div>
@@ -108,6 +120,13 @@ const ContactForm = ({name}) => {
                   >
                     Thank you for contacting us! Your message has been sent
                     successfully.
+                  </div>
+                  <div
+                    className={`error-message ${error ? "show" : ""}`}
+                    id="errorMessage"
+                  >
+                    Sorry, there was an error sending your message. Please try
+                    again.
                   </div>
                   <button
                     className="btn btn_submit"
