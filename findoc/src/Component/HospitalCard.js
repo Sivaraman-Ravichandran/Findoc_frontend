@@ -10,6 +10,7 @@ const HospitalCard = (item) => {
     navigate(`/hospital/${item.id}`);
   };
 
+  
   return (
     <div className="hospital-card" onClick={handleCardClick}>
       <img src={item.image} alt="error" className="hospital-image" />

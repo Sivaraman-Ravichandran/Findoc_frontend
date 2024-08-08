@@ -54,7 +54,7 @@ const topRatedDoctors = [
 const Home = () => {
   return (
     <>
-    <NavBar/>
+      <NavBar />
       <img
         src="https://telegra.ph/file/175dee0b21336504a8282.jpg"
         className="doctor-amma"

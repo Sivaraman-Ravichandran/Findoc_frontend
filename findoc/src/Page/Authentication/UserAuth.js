@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./UserAuth.css";
 
 const UserAuth = ({ setIsAuthenticated }) => {
   const [isRegister, setIsRegister] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
-  const [errors, setErrors] = useState({ name: "", email: "", password: "" });
+  const [form, setForm] = useState({ email: "", password: "" });
+  const [errors, setErrors] = useState({ email: "", password: "" });
   const navigate = useNavigate();
 
   const toggleMode = () => {
     setIsRegister(!isRegister);
-    setForm({ name: "", email: "", password: "" });
-    setErrors({ name: "", email: "", password: "" });
+    setForm({ email: "", password: "" });
+    setErrors({ email: "", password: "" });
   };
 
   const handleChange = (e) => {
@@ -22,10 +23,6 @@ const UserAuth = ({ setIsAuthenticated }) => {
   const validate = () => {
     let valid = true;
     let errors = {};
-    if (isRegister && !form.name) {
-      errors.name = "Name is required";
-      valid = false;
-    }
     if (!form.email) {
       errors.email = "Email is required";
       valid = false;
@@ -41,24 +38,48 @@ const UserAuth = ({ setIsAuthenticated }) => {
     return valid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      if (isRegister) {
-        // Handle registration logic
-        console.log("Registration successful", form);
-        setIsRegister(false); // Switch to login after successful registration
-        setForm({ name: "", email: "", password: "" });
-        setErrors({ name: "", email: "", password: "" });
-      } else {
-        // Handle login logic
-        console.log("Login successful", form);
-        localStorage.setItem("isAuthenticated", "true"); // Save authentication state
-        setIsAuthenticated(true);
-        navigate("/home"); // Navigate to the home page upon successful login
+      try {
+        if (isRegister) {
+          // Handle registration logic
+          const response = await axios.post(
+            "http://localhost:8080/saveUser",
+            form
+          );
+          alert("Registration Successful");
+          console.log("Registration successful", response.data);
+          setIsRegister(false); // Switch to login after successful registration
+          setForm({ email: "", password: "" });
+          setErrors({ email: "", password: "" });
+        } else {
+          // Handle login logic
+          const response = await axios.post("http://localhost:8080/login", {
+            email: form.email,
+            password: form.password,
+          });
+          alert("Login Successful");
+          console.log("Login successful", response.data);
+          localStorage.setItem("isAuthenticated", "true"); // Save authentication state
+          setIsAuthenticated(true);
+          navigate("/home"); // Navigate to the home page upon successful login
+        }
+      } catch (error) {
+        console.error("Error during authentication", error);
+        // Handle errors appropriately
+        if (error.response && error.response.data) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            email: error.response.data.message || "Invalid credentials",
+            password: error.response.data.message || "Invalid credentials",
+          }));
+          alert("Invalid credentials");
+        }
       }
     }
   };
+
   return (
     <div className="container">
       <div className="image-section"></div>
@@ -67,22 +88,6 @@ const UserAuth = ({ setIsAuthenticated }) => {
           <h1 style={{ textAlign: "center" }}>
             {isRegister ? "User Register" : "User Login"}
           </h1>
-          {isRegister && (
-            <div>
-              <label className="form-label">
-                Name:
-                <input
-                  type="text"
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  required
-                  className="form-input"
-                />
-              </label>
-              {errors.name && <p className="form-error">{errors.name}</p>}
-            </div>
-          )}
           <div>
             <label className="form-label">
               Email:

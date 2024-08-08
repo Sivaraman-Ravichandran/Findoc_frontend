@@ -5,9 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+::selection {
+  background-color: #3A3D48; /* Highlight color */
+  color: #ffffff; /* Optional: Change the text color for better contrast */
 }
