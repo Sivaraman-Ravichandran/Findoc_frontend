@@ -2,7 +2,7 @@ import React from "react";
 import "./Lnavbar.css";
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar-landing">
       <div className="logo">
         <img
           src="https://graph.org/file/8998a48e103ccf565ec2b.jpg"

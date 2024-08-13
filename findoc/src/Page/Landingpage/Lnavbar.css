@@ -3,7 +3,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  .navbar {
+  .navbar-landing {
     display: flex;
     justify-content: space-between;
     align-items: center;
