@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./DefaultAuth.css";
-
+import "./Auth.css";
 const DefaultAuth = () => {
   const navigate = useNavigate();
   const handleAdminLogin = () => {

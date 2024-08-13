@@ -3,7 +3,7 @@ import './Dashboard.css'; // Import CSS for styling
 import DoctorForm from './AddDoctor/AddDoctor'; // Assuming the form component is named DoctorForm
 import DoctorList from './DoctorList/DoctorList'; // Import the DoctorList component
 import HospitalList from './HospitalList/HospitalList';
-
+import Logo from "../../assets/finddoc.png";
 const Dashboard = () => {
   const [isHospitalDropdownOpen, setIsHospitalDropdownOpen] = useState(false);
   const [isDoctorDropdownOpen, setIsDoctorDropdownOpen] = useState(false);
@@ -33,7 +33,7 @@ const Dashboard = () => {
     <div className="dashboard-container">
       <aside className="sidebar">
         <div className="profile">
-          <img src="path_to_profile_image" alt="Profile" />
+          <img src={Logo} alt="Profile" />
           <h3>Nick Gonzalez</h3>
           <p>Dept Admin</p>
         </div>

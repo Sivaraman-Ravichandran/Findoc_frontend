@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createDoctorProfile } from '../../../Api/Service'; // Import the Axios function
+import { createDoctorProfile } from "../../../Api/Service"; // Import the Axios function
 
 const Availability = () => {
   const [availability, setAvailability] = useState({});

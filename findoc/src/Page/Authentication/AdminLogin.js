@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AdminLogin.css';
-
+import "./Auth.css";
 const AdminLogin = ({ setIsAuthenticated }) => {
   const [form, setForm] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({ email: '', password: '' });
@@ -37,7 +36,7 @@ const AdminLogin = ({ setIsAuthenticated }) => {
       console.log('Login successful', form);
       localStorage.setItem('isAuthenticated', 'true'); // Save authentication state
       setIsAuthenticated(true);
-      navigate('/home'); // Navigate to the home page upon successful login
+      navigate('/dashboard'); // Navigate to the home page upon successful login
     }
   };
 
