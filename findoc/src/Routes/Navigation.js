@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DefaultAuth from "../Page/Authentication/DefaultAuth";
-import AdminLogin from "../Page/Authentication/AdminLogin";
-import UserAuth from "../Page/Authentication/UserAuth";
+import Auth from "../Page/Authentication/Auth";
 import Home from "../Page/Home";
 import Hospital from "../Page/Hospital";
 import Doctors from "../Page/Doctors";
@@ -16,28 +14,12 @@ import LandingPage from "../Page/Landingpage/LandingPage";
 import DoctorPage from "../Page/DoctorPage";
 import Dashboard from "../Page/Admin/DashBoard";
 function Navigation() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const authState = localStorage.getItem("isAuthenticated");
-    if (authState === "true") {
-      setIsAuthenticated(true);
-    }
-  }, []);
+  
   return (
     <BrowserRouter>
-    {isAuthenticated}
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/default" element={<DefaultAuth />} />
-        <Route
-          path="/admin-login"
-          element={<AdminLogin setIsAuthenticated={setIsAuthenticated} />}
-        />
-        <Route
-          path="/user-login"
-          element={<UserAuth setIsAuthenticated={setIsAuthenticated} />}
-        />
+        <Route path="/login" element={<Auth />} />
         <Route path="/home" element={<Home />} />
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/specialists" element={<Specialists />} />

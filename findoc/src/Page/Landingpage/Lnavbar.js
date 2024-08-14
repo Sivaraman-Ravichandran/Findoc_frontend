@@ -1,11 +1,14 @@
 import React from "react";
 import "./Lnavbar.css";
+import Logo from '../../assets/finddoc_logo.jpeg'
+import Profile from "../../assets/person-circle.svg";
+
 const Navbar = () => {
   return (
     <nav className="navbar-landing">
       <div className="logo">
         <img
-          src="https://graph.org/file/8998a48e103ccf565ec2b.jpg"
+          src={Logo}
           alt="error"
         />
       </div>
@@ -37,13 +40,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <img
-            src="https://graph.org/file/013ab34a2d54cf6c62955.jpg"
-            width={"50px"}
-            height={"50px"}
-            style={{ borderRadius: "80px" }}
-            alt="error"
-          ></img>
+        <img src={Profile} alt="Profile" />
         </li>
       </ul>
     </nav>

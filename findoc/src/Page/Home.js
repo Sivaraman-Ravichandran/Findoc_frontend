@@ -8,25 +8,25 @@ import NavBar from "./NavBar";
 const topRatedHospitals = [
   {
     id: 1,
-    name: "PSG Hospital",
+    name: "KYC Hospital",
     address: "123 Main St, Cityville",
-    image: "https://graph.org/file/1cf2a543d67ff270eef04.jpg",
+    image: "https://telegra.ph/file/5a334e1067174bfa01b3c.jpg",
   },
   {
     id: 2,
-    name: "KG Hospital",
+    name: "Indica Hospital",
     address: "456 Elm St, Townsville",
-    image: "https://graph.org/file/7a5580a9567eb5e5d8322.jpg",
+    image: "https://telegra.ph/file/128c3a2c4f18a46920b7c.jpg",
   },
   {
     id: 3,
-    name: "Kilpauk Hospital",
+    name: "ABC Hospital",
     address: "123 Main St, Cityville",
     image: "https://graph.org/file/96e0d65c056e003ca98c2.jpg",
   },
   {
     id: 4,
-    name: "Hospital",
+    name: "ETS Hospital",
     address: "456 Elm St, Townsville",
     image: "https://graph.org/file/7a5580a9567eb5e5d8322.jpg",
   },
@@ -56,7 +56,7 @@ const Home = () => {
     <>
       <NavBar />
       <img
-        src="https://telegra.ph/file/175dee0b21336504a8282.jpg"
+        src="https://telegra.ph/file/3386abb7d2c6e545b3c8d.jpg"
         className="doctor-amma"
         alt="HealthConnect"
       />

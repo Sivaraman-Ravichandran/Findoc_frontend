@@ -24,7 +24,7 @@ const Lhero = () => {
           today by searching for the best healthcare professionals<br></br> in
           your area. Contact us for more information or to get started.
         </p>
-        <button className="Lbtn" onClick={() => navigate("/default")}>
+        <button className="Lbtn" onClick={() => navigate("/login")}>
           Explore
         </button>
       </div>

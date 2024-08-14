@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import Logo from "../assets/finddoc.png";
+import Logo from "../assets/finddoc_logo.jpeg";
 import Profile from "../assets/person-circle.svg";
+
 const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/home">
-          <img src={Logo} style={{ width: 50, height: 60 }} alt="Logo" />
+          <img src={Logo} alt="Logo" />
         </Link>
       </div>
       <ul className="navbar-links">
@@ -31,9 +32,11 @@ const NavBar = () => {
           <Link to="/locations">Locations</Link>
         </li>
       </ul>
-      <Link to="/profile">
-        <img src={Profile} color="white" style={{width:30,height:30}} alt="error" />
-      </Link>
+      <div className="navbar-profile">
+        <Link to="/profile">
+          <img src={Profile} alt="Profile" />
+        </Link>
+      </div>
     </nav>
   );
 };

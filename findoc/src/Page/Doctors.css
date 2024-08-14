@@ -1,45 +1,58 @@
 .doctors-container {
-  padding: 2rem;
+  padding: 3rem 2rem;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   min-height: 80vh;
 }
 
 .doctors-container h1 {
-  color: #333;
-  margin-bottom: 1rem;
+  color: #222;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  
 }
 
 .search-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .search-input {
-  width: 300px;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  width: 350px;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   margin-right: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
 }
 
 .search-button {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border: none;
-  background-color: #333;
+  background-color: #007bff;
   color: white;
-  border-radius: 4px;
+  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .search-button:hover {
-  background-color: #555;
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 .doctor-cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 1.5rem;
 }

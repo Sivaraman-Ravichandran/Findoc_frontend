@@ -32,6 +32,27 @@ const Events = () => {
         description: "Get vaccinated for free.",
         image: "https://graph.org/file/b0e894be7bf70ef6a53e8.jpg", // Add image path
       },
+      {
+        title: "Vaccination Drive",
+        date: "2024-09-20",
+        location: "Town Hall",
+        description: "Get vaccinated for free.",
+        image: "https://graph.org/file/b0e894be7bf70ef6a53e8.jpg", // Add image path
+      },
+      {
+        title: "Vaccination Drive",
+        date: "2024-09-20",
+        location: "Town Hall",
+        description: "Get vaccinated for free.",
+        image: "https://graph.org/file/b0e894be7bf70ef6a53e8.jpg", // Add image path
+      },
+      {
+        title: "Vaccination Drive",
+        date: "2024-09-20",
+        location: "Town Hall",
+        description: "Get vaccinated for free.",
+        image: "https://graph.org/file/b0e894be7bf70ef6a53e8.jpg", // Add image path
+      },
       // Add more events here
     ];
 
@@ -39,12 +60,14 @@ const Events = () => {
       {
         title: "New Health Initiative Launched",
         date: "2024-07-20",
+        image:"",
         content:
           "A new health initiative has been launched to improve community health.",
       },
       {
         title: "COVID-19 Vaccination Drive",
         date: "2024-07-25",
+        image:"",
         content:
           "A mass COVID-19 vaccination drive will take place this weekend.",
       },
