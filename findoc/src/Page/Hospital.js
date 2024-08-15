@@ -3,7 +3,7 @@ import axios from "axios";
 import HospitalCard from "../Component/HospitalCard";
 import "./Hospital.css";
 import NavBar from "./NavBar";
-
+import Footer from '../Component/Footer';
 const Hospital = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [hospitals, setHospitals] = useState([]);
@@ -69,6 +69,7 @@ const Hospital = () => {
           )}
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

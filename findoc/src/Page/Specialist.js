@@ -2,6 +2,7 @@ import React from "react";
 import SpecialistCard from "../Component/SpecialListCard";
 import "./Specialist.css";
 import NavBar from "./NavBar";
+import Footer from '../Component/Footer';
 const specialties = [
   {
     id: 1,
@@ -72,6 +73,7 @@ const SpecialistPage = () => {
         ))}
       </div>
     </div>
+    <Footer/>
     </>
   );
 };

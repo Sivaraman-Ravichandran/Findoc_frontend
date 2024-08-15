@@ -5,6 +5,7 @@ import EventSlideshow from "./EventSlideshow";
 import NewsSlideshow from "../Component/NewsCard";
 import "./Events.css";
 import NavBar from "./NavBar";
+import Footer from '../Component/Footer';
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [news, setNews] = useState([]);
@@ -28,21 +29,21 @@ const Events = () => {
       {
         title: "Vaccination Drive",
         date: "2024-07-29",
-        location: "Town Hall",
+        location: "USA",
+        description: "Get vaccinated for free.",
+        image: "https://graph.org/file/b0e894be7bf70ef6a53e8.jpg", // Add image path
+      },
+      {
+        title: "Vaccination Drive",
+        date: "2024-10-02",
+        location: "France",
         description: "Get vaccinated for free.",
         image: "https://graph.org/file/b0e894be7bf70ef6a53e8.jpg", // Add image path
       },
       {
         title: "Vaccination Drive",
         date: "2024-09-20",
-        location: "Town Hall",
-        description: "Get vaccinated for free.",
-        image: "https://graph.org/file/b0e894be7bf70ef6a53e8.jpg", // Add image path
-      },
-      {
-        title: "Vaccination Drive",
-        date: "2024-09-20",
-        location: "Town Hall",
+        location: "Germany",
         description: "Get vaccinated for free.",
         image: "https://graph.org/file/b0e894be7bf70ef6a53e8.jpg", // Add image path
       },
@@ -66,7 +67,7 @@ const Events = () => {
       },
       {
         title: "COVID-19 Vaccination Drive",
-        date: "2024-07-25",
+        date: "2024-09-20",
         image:"",
         content:
           "A mass COVID-19 vaccination drive will take place this weekend.",
@@ -105,6 +106,7 @@ const Events = () => {
         <h1>Medical News</h1>
         <NewsSlideshow newsItems={news} />
       </div>
+      <Footer/>
     </>
   );
 };

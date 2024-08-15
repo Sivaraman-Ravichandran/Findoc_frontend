@@ -4,6 +4,7 @@ import "../Component/DoctorCard.css";
 import DoctorCard from "../Component/DoctorCard";
 import "./Doctors.css";
 import NavBar from "./NavBar";
+import Footer from '../Component/Footer';
 
 const Doctors = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -12,7 +13,6 @@ const Doctors = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch doctors data from an API
     axios
       .get("http://localhost:8080/doctorCardGet")
       .then((response) => {
@@ -31,9 +31,9 @@ const Doctors = () => {
 
   const filteredDoctors = doctorsData.filter(
     (doctor) =>
-      doctor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      doctor.specialty.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      doctor.location.toLowerCase().includes(searchTerm.toLowerCase())
+      doctor.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      doctor.specialty?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      doctor.location?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -62,6 +62,7 @@ const Doctors = () => {
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 };

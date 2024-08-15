@@ -5,6 +5,7 @@ import "./Home.css";
 import "../Component/DoctorCard.css";
 import "../Component/HospitalCard.css";
 import NavBar from "./NavBar";
+import Footer from '../Component/Footer';
 const topRatedHospitals = [
   {
     id: 1,
@@ -89,6 +90,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
